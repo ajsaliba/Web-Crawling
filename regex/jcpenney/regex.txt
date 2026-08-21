@@ -1,0 +1,6 @@
+catalog: ^https?://(?:www\.)?jcpenney\.com/g/(?:[a-z0-9\-]+/)*[a-z0-9\-]+\?(?:[^#]*?(?:&amp;|&))?id=(?P<catalog_id>(?:cat|dept)\d+)(?:(?:&amp;|&)[^#]*)?$
+search: ^https?://(?:www\.)?jcpenney\.com/s\?(?:[^#]*?(?:&amp;|&))?searchTerm=(?P<term>[^&#]+)(?:(?:&amp;|&)[^#]*)?$
+product: ^https?://(?:www\.)?jcpenney\.com/p/(?P<slug>[a-z0-9\-]+)/(?P<product_id>ppr\d+)(?:\?[^#]*)?$
+titles: ^https?://(?:www\.)?jcpenney\.com/(?:g/(?:[a-z0-9\-]+/)*(?P<slug>[a-z0-9\-]+)\?(?=[^#]*id=(?:cat|dept)\d+)(?=(?:[^#]*(?:&amp;|&))?brand=(?P<brand>[^&#]+)|)[^#]*|p/(?P<product_slug>[a-z0-9\-]+)/ppr\d+(?:\?[^#]*)?)$
+images: ^https?://sc-images\.jcpenney\.com/JCPenney/(?P<image_id>[A-Za-z0-9._\-]+?)(?:\?[^#]*|(?=[a-z][a-z_]*=)[^#]*)?$
+videos: ^https?://sc-videos\.jcpenney\.com/JCPenney/(?P<video_id>[A-Za-z0-9._\-]+?)(?:\?[^#]*|(?=[a-z][a-z_]*=)[^#]*)?$

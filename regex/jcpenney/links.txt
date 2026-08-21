@@ -1,0 +1,57 @@
+Search URLs
+===========
+https://www.jcpenney.com/s?searchTerm=red+pants
+https://www.jcpenney.com/s?searchTerm=hello+from+antonios+saliba
+https://www.jcpenney.com/s?searchTerm=my+name+is+%3D%3D%3F.%2F
+
+--------------------------------
+
+Catalog URLs
+============
+https://www.jcpenney.com/g/brands/alfred-dunner?id=cat11100024376 for Alfred Dunner
+https://www.jcpenney.com/g/baby-kids/carters?id=cat11100001546 for Carters
+https://www.jcpenney.com/g/shoes?brand=adidas&id=dept20000018 for adidas
+https://www.jcpenney.com/g/juniors?brand=arizona&id=dept20023450025 for arizona
+https://www.jcpenney.com/g/brands/belle-vie?id=cat11100025147 for belle vie
+https://www.jcpenney.com/g/shops/puma?id=cat11100000153 for puma
+
+--------------------------------
+
+Product URLs
+============
+https://www.jcpenney.com/p/st-johns-bay-womens-secretly-slender-mid-rise-capri-pant/ppr5008539456?pTmplType=regular&searchTerm=pants
+https://www.jcpenney.com/p/biltmore-mens-fedora/ppr5008442615?pTmplType=regular&searchTerm=hat
+https://www.jcpenney.com/p/xersion-sport-little-big-kid-girls-skort/ppr5008591826?pTmplType=regular
+https://www.jcpenney.com/p/bijoux-bar-womens-17-inch-collar-necklace/ppr5008771620?pTmplType=regular
+https://www.jcpenney.com/p/st-johns-bay-womens-mid-rise-bootcut-jean/ppr5008655264?pTmplType=regular
+https://www.jcpenney.com/p/martha-stewart-harvest-10-inch-ceramic-serve-bowl/ppr5008634060?pTmplType=regular
+
+--------------------------------
+
+Title URLs:
+===========
+https://www.jcpenney.com/g/home-store/kitchen-dining/cooks?id=cat11100007010
+https://www.jcpenney.com/g/juniors?brand=arizona&amp;id=dept20023450025
+https://www.jcpenney.com/g/brands/ninja?id=cat11100025927
+https://www.jcpenney.com/g/men/workout-clothes?brand=adidas&amp;id=cat100290088
+https://www.jcpenney.com/p/linden-street-terra-pumpkin-4-pc-stoneware-dinner-plate/ppr5008499707?pTmplType=regular
+
+--------------------------------
+
+Image URLs
+==========
+https://sc-images.jcpenney.com/JCPenney/DP0912202511211127M?impolicy=product_detail&amp;height=550&amp;width=550
+https://sc-images.jcpenney.com/JCPenney/DP0912202511211023M?impolicy=product_detail&amp;height=550&amp;width=550
+https://sc-images.jcpenney.com/JCPenney/DP68462246-20260710143622M?impolicy=product_detail&amp;height=550&amp;width=550
+https://sc-images.jcpenney.com/JCPenney/DP68464632-20260710144403M?impolicy=product_detail&amp;height=550&amp;width=550
+https://sc-images.jcpenney.com/JCPenney/DP68464333-20260710144243M?impolicy=product_detail&amp;height=550&amp;width=550
+
+--------------------------------
+
+Video URLs
+--------------------------------
+https://sc-videos.jcpenney.com/JCPenney/9152867A_V_VA_5-1OZ
+https://sc-videos.jcpenney.com/JCPenney/GOLF-leFLEUR-FRENCH-WALTZ
+https://sc-videos.jcpenney.com/JCPenney/9150231A_V_VA_VOYAGE
+https://sc-videos.jcpenney.com/JCPenney/9150231A_V_VA_VOYAGE
+https://sc-videos.jcpenney.com/JCPenney/9151842A_V_VA_4-2OZ
