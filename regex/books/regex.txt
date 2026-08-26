@@ -1,0 +1,9 @@
+block: <article\b[^>]*\bclass\s*=\s*"[^"]*\bproduct_pod\b[^"]*"[^>]*>(?P<block>.*?)</article>
+title: <h3\b[^>]*>\s*<a\b[^>]*\btitle\s*=\s*"(?P<title>[^"]*)"
+price: <p\b(?=[^>]*\bclass\s*=\s*"[^"]*\bprice_color\b)[^>]*>\s*(?P<price>[^<]*?)\s*</p>
+image: <img\b(?=[^>]*\bclass\s*=\s*"[^"]*\bthumbnail\b)[^>]*\bsrc\s*=\s*"(?P<image_url>[^"]+)"
+rating: <p\b[^>]*\bclass\s*=\s*"[^"]*\bstar-rating\s+(?P<rating>One|Two|Three|Four|Five)\b[^"]*"
+detail: <h3\b[^>]*>\s*<a\b[^>]*\bhref\s*=\s*"(?P<detail_url>[^"]+)"
+record: <article\b[^>]*\bclass\s*=\s*"[^"]*\bproduct_pod\b[^"]*"[^>]*>(?:(?!</article>).)*?<img\b(?=[^>]*\bclass\s*=\s*"[^"]*\bthumbnail\b)[^>]*\bsrc\s*=\s*"(?P<image_url>[^"]+)"(?:(?!</article>).)*?<p\b[^>]*\bclass\s*=\s*"[^"]*\bstar-rating\s+(?P<rating>One|Two|Three|Four|Five)\b[^"]*"(?:(?!</article>).)*?<h3\b[^>]*>\s*<a\b[^>]*\btitle\s*=\s*"(?P<title>[^"]*)"(?:(?!</article>).)*?<p\b(?=[^>]*\bclass\s*=\s*"[^"]*\bprice_color\b)[^>]*>\s*(?P<price>[^<]*?)\s*</p>
+high: <article\b[^>]*\bclass\s*=\s*"[^"]*\bproduct_pod\b[^"]*"[^>]*>(?:(?!</article>).)*?<img\b(?=[^>]*\bclass\s*=\s*"[^"]*\bthumbnail\b)[^>]*\bsrc\s*=\s*"(?P<image_url>[^"]+)"(?:(?!</article>).)*?<p\b[^>]*\bclass\s*=\s*"[^"]*\bstar-rating\s+(?P<rating>Three|Four|Five)\b[^"]*"(?:(?!</article>).)*?<h3\b[^>]*>\s*<a\b[^>]*\btitle\s*=\s*"(?P<title>[^"]*)"(?:(?!</article>).)*?<p\b(?=[^>]*\bclass\s*=\s*"[^"]*\bprice_color\b)[^>]*>\s*(?P<price>[^<]*?)\s*</p>
+money: Â?£\s*\d+(?:[.,]\d{1,2})?
