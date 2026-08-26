@@ -1,0 +1,4 @@
+# Runtime dependencies for the requests-based scraper.
+# The Scrapy project in ../crawler/ has its own; see ../requirements.txt.
+requests>=2.31
+beautifulsoup4>=4.12
