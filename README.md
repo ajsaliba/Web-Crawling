@@ -19,6 +19,7 @@ file covers what was built and why.
 | 4 | [`site_config.yaml`](site_config.yaml) | Config for a generic crawling engine |
 | 5 | [`reasoning.md`](reasoning.md) | Scenarios 1-5 |
 | extra | [`requests_scraper/`](requests_scraper/) | The same catalogue scraped with `requests` + BeautifulSoup, plus every cover image. Self-contained, with its own [README](requests_scraper/README.md) |
+| extra | [`image_pipeline_crawler/`](image_pipeline_crawler/) | Scrapy spider with a custom image pipeline: covers saved to `downloaded_images/<category>/<title>.jpg`, with optional `-a category` and `-a title_keyword` filters. Self-contained, with its own [README](image_pipeline_crawler/README.md) |
 
 ```text
 Web-Crawling/
@@ -45,6 +46,11 @@ Web-Crawling/
 │   │                            storage, scraper, cli)
 │   ├── tests/                   25 offline tests
 │   └── output/                  books.json, books.csv, summary.json, images/, logs/
+├── image_pipeline_crawler/      extra - Scrapy spider + custom image pipeline
+│   ├── README.md                its own docs: filtering rules and pipeline design
+│   ├── scrapy.cfg
+│   └── bookcovers/              items, naming (doctested), pipelines, settings,
+│                                spiders/book_spider.py
 └── given/                       the original brief
 ```
 
@@ -88,6 +94,18 @@ The extra `requests` scraper, which also downloads the cover images, runs on its
 cd requests_scraper
 pip install -r requirements.txt
 python -m books_scraper --limit 20      # drop --limit for all 1,000
+```
+
+The extra Scrapy image-pipeline spider runs from
+[`image_pipeline_crawler/`](image_pipeline_crawler/) and is documented there. It writes
+`downloaded_images/<category>/<title>.jpg` through a hand-written pipeline, and takes two
+optional filters:
+
+```bash
+cd image_pipeline_crawler
+scrapy crawl book_spider                                    # whole catalogue
+scrapy crawl book_spider -a category="Science"              # one category
+scrapy crawl book_spider -a category="Childrens" -a title_keyword="robot"
 ```
 
 ## How it works
