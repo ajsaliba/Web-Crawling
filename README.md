@@ -18,6 +18,7 @@ file covers what was built and why.
 | 3 | [`investigate_site.py`](investigate_site.py) | The same investigation, in code |
 | 4 | [`site_config.yaml`](site_config.yaml) | Config for a generic crawling engine |
 | 5 | [`reasoning.md`](reasoning.md) | Scenarios 1-5 |
+| extra | [`requests_scraper/`](requests_scraper/) | The same catalogue scraped with `requests` + BeautifulSoup, plus every cover image. Self-contained, with its own [README](requests_scraper/README.md) |
 
 ```text
 Web-Crawling/
@@ -38,6 +39,12 @@ Web-Crawling/
 │       ├── pipelines.py         dedup, field-coverage report
 │       ├── settings.py          politeness, retries, feed export
 │       └── spiders/books.py     traversal and selectors
+├── requests_scraper/            extra - requests + BeautifulSoup, data and cover images
+│   ├── README.md                its own docs, schema and design notes
+│   ├── books_scraper/           the package (config, http_client, parsers, images,
+│   │                            storage, scraper, cli)
+│   ├── tests/                   25 offline tests
+│   └── output/                  books.json, books.csv, summary.json, images/, logs/
 └── given/                       the original brief
 ```
 
@@ -73,6 +80,15 @@ python investigate_site.py
 ```
 
 `-O` overwrites, `-o` appends. Running `-o` twice gives you every product duplicated.
+
+The extra `requests` scraper, which also downloads the cover images, runs on its own from
+[`requests_scraper/`](requests_scraper/) and is documented there:
+
+```bash
+cd requests_scraper
+pip install -r requirements.txt
+python -m books_scraper --limit 20      # drop --limit for all 1,000
+```
 
 ## How it works
 

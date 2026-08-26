@@ -1,0 +1,32 @@
+{
+  "started_at": "2026-08-26T12:09:51+00:00",
+  "finished_at": "2026-08-26T12:21:40+00:00",
+  "duration_seconds": 708.8,
+  "pages_visited": 50,
+  "books_scraped": 1000,
+  "duplicates_skipped": 0,
+  "images_downloaded": 476,
+  "images_already_on_disk": 524,
+  "images_failed": 0,
+  "failed_requests": [],
+  "field_coverage": {
+    "title": 1000,
+    "upc": 1000,
+    "category": 1000,
+    "price": 1000,
+    "price_excl_tax": 1000,
+    "tax": 1000,
+    "currency": 1000,
+    "rating": 1000,
+    "availability": 1000,
+    "stock_count": 1000,
+    "review_count": 1000,
+    "description": 998,
+    "product_url": 1000,
+    "image_url": 1000,
+    "thumbnail_url": 1000,
+    "image_file": 1000,
+    "slug": 1000,
+    "scraped_at": 1000
+  }
+}
