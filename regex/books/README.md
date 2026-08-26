@@ -16,6 +16,7 @@ library's `pathlib`/`sys` for the CLI, nothing else.
 | [`listing_home.html`](listing_home.html) | `https://books.toscrape.com/` — the default page |
 | [`listing_category.html`](listing_category.html) | `/catalogue/category/books_1/index.html` — same books, `../../../` image paths |
 | [`listing_page2.html`](listing_page2.html) | `/catalogue/page-2.html` — a different 20 books |
+| [`output/`](output/) | every task's answers, one directory per page |
 
 Three pages, not one, because the interesting differences between them are
 exactly what a brittle pattern trips over. Each writes its image `src` with a
@@ -45,6 +46,7 @@ python books_regex.py <task> [page.html]
 | `records` | 2.6 | `(title, price, stars, image_url)` per book |
 | `redact` | 3.7 | prices replaced with `[REDACTED]` |
 | `high-rated` | 3.8 | only Three stars and up |
+| `emit` | — | write every task's output to `output/` |
 
 The page argument defaults to `listing_home.html`.
 
@@ -64,6 +66,24 @@ $ python books_regex.py high-rated listing_page2.html
   ...
 ]
 ```
+
+`emit` runs all eight tasks over all three pages and writes the answers to
+`output/<page>/`, so they can be read without running anything:
+
+```text
+output/listing_home/
+├── titles.txt          20 lines
+├── prices.txt          20 lines
+├── image_urls.txt      20 lines
+├── ratings.txt         20 lines
+├── detail_urls.txt     20 lines
+├── records.txt         the 20 tuples, in the brief's Output format
+├── high_rated.txt      the 11 rated Three or better
+└── redacted.html       the whole page with every price replaced
+```
+
+Re-running `emit` is byte-identical, so a diff in `output/` always means the
+patterns changed.
 
 With no arguments it runs the self-test over all three pages. Exit status is
 `0` only if every check passed, so it drops into CI directly.

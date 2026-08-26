@@ -594,6 +594,54 @@ def self_test():
 
 # --- CLI --------------------------------------------------------------
 
+OUTPUT_DIR = HERE / "output"
+
+
+def format_tuples(rows):
+    """Render tuples in the shape the brief's Output block shows.
+
+    Double quotes and no trailing comma, which `repr` gives neither of. Any
+    quote inside a value is escaped, so the block stays readable if a title
+    ever contains one.
+    """
+    lines = ["["]
+    for i, row in enumerate(rows):
+        fields = ", ".join('"' + f.replace('"', '\\"') + '"' for f in row)
+        comma = "," if i < len(rows) - 1 else ""
+        lines.append(f"  ({fields}){comma}")
+    lines.append("]")
+    return "\n".join(lines) + "\n"
+
+
+def write_outputs():
+    """Run all eight tasks over every saved page and write the results.
+
+    One directory per page under output/, so the three prefix variants stay
+    distinguishable. Committed alongside the code, so the answers can be read
+    without running anything.
+    """
+    written = []
+    for page in PAGES:
+        html = (HERE / page).read_text(encoding="utf-8")
+        target = OUTPUT_DIR / page.removesuffix(".html")
+        target.mkdir(parents=True, exist_ok=True)
+
+        files = {
+            "titles.txt": "\n".join(titles(html)) + "\n",
+            "prices.txt": "\n".join(prices(html)) + "\n",
+            "image_urls.txt": "\n".join(image_urls(html)) + "\n",
+            "ratings.txt": "\n".join(ratings(html)) + "\n",
+            "detail_urls.txt": "\n".join(detail_urls(html)) + "\n",
+            "records.txt": format_tuples(records(html)),
+            "high_rated.txt": format_tuples(high_rated(html)),
+            "redacted.html": redact_prices(html),
+        }
+        for name, body in files.items():
+            (target / name).write_text(body, encoding="utf-8", newline="\n")
+            written.append(target / name)
+    return written
+
+
 TASKS = {
     "titles": ("1", lambda h: titles(h)),
     "prices": ("2", lambda h: prices(h)),
@@ -610,7 +658,8 @@ USAGE = f"""usage: python books_regex.py [<task>] [<page.html>]
   tasks: {', '.join(TASKS)}
   page:  defaults to {PAGES[0]}
 
-  With no task, runs the self-test over all saved pages."""
+  emit          run every task over every saved page into output/
+  (no task)     run the self-test over all saved pages"""
 
 
 def main(argv):
@@ -619,6 +668,11 @@ def main(argv):
         return 0
     if not argv or argv[0] == "--self-test":
         return self_test()
+
+    if argv[0] == "emit":
+        for path in write_outputs():
+            print(path.relative_to(HERE))
+        return 0
 
     task = argv[0]
     if task not in TASKS:
