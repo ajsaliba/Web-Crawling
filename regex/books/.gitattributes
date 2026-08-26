@@ -1,0 +1,5 @@
+# The saved pages are the exact bytes books.toscrape.com serves, and it uses
+# LF. `emit` writes LF too. Without this, Windows checkouts get CRLF working
+# copies: git stays clean either way, but the fixtures stop being byte-faithful
+# to the server and a re-emit is no longer byte-identical on disk.
+* text eol=lf
