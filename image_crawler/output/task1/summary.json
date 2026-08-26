@@ -1,0 +1,25 @@
+{
+  "categories_crawled": 3,
+  "books_scraped": 90,
+  "images": {
+    "downloaded": 0,
+    "skipped": 90,
+    "failed": 0
+  },
+  "http_requests": 96,
+  "per_category": {
+    "Fiction": {
+      "books": 65,
+      "images_ok": 65
+    },
+    "Science": {
+      "books": 14,
+      "images_ok": 14
+    },
+    "Travel": {
+      "books": 11,
+      "images_ok": 11
+    }
+  },
+  "elapsed_seconds": 24.8
+}

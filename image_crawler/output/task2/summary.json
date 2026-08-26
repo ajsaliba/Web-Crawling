@@ -1,0 +1,213 @@
+{
+  "categories_crawled": 50,
+  "books_scraped": 165,
+  "images": {
+    "downloaded": 165,
+    "skipped": 0,
+    "failed": 0
+  },
+  "http_requests": 380,
+  "per_category": {
+    "Travel": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Mystery": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Historical Fiction": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Sequential Art": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Classics": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Philosophy": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Romance": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Womens Fiction": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Fiction": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Childrens": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Religion": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Nonfiction": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Music": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Default": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Science Fiction": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Sports and Games": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Add a comment": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Fantasy": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "New Adult": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Young Adult": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Science": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Poetry": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Paranormal": {
+      "books": 1,
+      "images_ok": 1
+    },
+    "Art": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Psychology": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Autobiography": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Parenting": {
+      "books": 1,
+      "images_ok": 1
+    },
+    "Adult Fiction": {
+      "books": 1,
+      "images_ok": 1
+    },
+    "Humor": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Horror": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "History": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Food and Drink": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Christian Fiction": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Business": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Biography": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Thriller": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Contemporary": {
+      "books": 3,
+      "images_ok": 3
+    },
+    "Spirituality": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Academic": {
+      "books": 1,
+      "images_ok": 1
+    },
+    "Self Help": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Historical": {
+      "books": 2,
+      "images_ok": 2
+    },
+    "Christian": {
+      "books": 3,
+      "images_ok": 3
+    },
+    "Suspense": {
+      "books": 1,
+      "images_ok": 1
+    },
+    "Short Stories": {
+      "books": 1,
+      "images_ok": 1
+    },
+    "Novels": {
+      "books": 1,
+      "images_ok": 1
+    },
+    "Health": {
+      "books": 4,
+      "images_ok": 4
+    },
+    "Politics": {
+      "books": 3,
+      "images_ok": 3
+    },
+    "Cultural": {
+      "books": 1,
+      "images_ok": 1
+    },
+    "Erotica": {
+      "books": 1,
+      "images_ok": 1
+    },
+    "Crime": {
+      "books": 1,
+      "images_ok": 1
+    }
+  },
+  "elapsed_seconds": 97.1
+}
